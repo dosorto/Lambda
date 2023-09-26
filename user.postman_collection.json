@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "c1832123-08d6-40a4-9113-7a19f4621d06",
+		"name": "user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2025154"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{URL}}/"
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{URL}}/user"
+			},
+			"response": []
+		},
+		{
+			"name": "/user/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{URL}}/user/2"
+			},
+			"response": []
+		},
+		{
+			"name": "/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"name\":\"user04\",\n    \"email\":\"user04@user.com\"\n}"
+				},
+				"url": "{{URL}}/user"
+			},
+			"response": []
+		},
+		{
+			"name": "/user/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"name\":\"user04\",\n    \"email\":\"user04@user.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{URL}}/user/1"
+			},
+			"response": []
+		},
+		{
+			"name": "/user/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{URL}}/user/1"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://bs5bgwa0cl.execute-api.us-east-2.amazonaws.com",
+			"type": "string"
+		}
+	]
+}
